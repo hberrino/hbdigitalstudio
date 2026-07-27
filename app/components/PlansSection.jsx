@@ -47,13 +47,6 @@ export default function PlansSection() {
 
   return (
     <section className="plans section" id="planes">
-      <div className="plans__marquee" aria-label="Promoción: abonás únicamente si el resultado es el que esperabas. Aprovechá 50% OFF por tiempo limitado en todos nuestros planes.">
-        <div className="plans__marquee-track" aria-hidden="true">
-          {[0, 1, 2, 3].map((item) => (
-            <span key={item}>Abonás únicamente si el resultado es el que esperabas <i /> Aprovechá <strong>50% OFF</strong> por tiempo limitado en todos nuestros planes</span>
-          ))}
-        </div>
-      </div>
       <div className="container">
       <SectionHeading
         eyebrow="Planes"
@@ -61,6 +54,13 @@ export default function PlansSection() {
         text="Desde una presencia digital profesional hasta un sistema completamente adaptado a tu operación."
         align="center"
       />
+      <div className="plans__marquee" aria-label="Promoción: abonás únicamente si el resultado es el que esperabas. Aprovechá 50% OFF por tiempo limitado en todos nuestros planes.">
+        <div className="plans__marquee-track" aria-hidden="true">
+          {[0, 1, 2, 3].map((item) => (
+            <span key={item}>Abonás únicamente si el resultado es el que esperabas <i /> Aprovechá <strong>50% OFF</strong> por tiempo limitado en todos nuestros planes</span>
+          ))}
+        </div>
+      </div>
       <div className="plans__grid" ref={gridRef} onClick={centerSelectedPlan}>
         {plans.map((plan) => <PlanCard plan={plan} key={plan.id} onInfo={() => setFeaturesOpen(true)} />)}
       </div>
