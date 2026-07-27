@@ -67,10 +67,9 @@ button { font: inherit; }
 .hero__copy h1 { max-width: 980px; margin: 0 auto; font-family: var(--font-manrope), sans-serif; font-size: clamp(48px, 6.2vw, 82px); line-height: 1; letter-spacing: -.06em; }
 .hero__copy h1 em, .problem__intro h2 em, .mock-hero em, .phone__content em { background: linear-gradient(90deg, var(--mint), var(--purple)); -webkit-background-clip: text; background-clip: text; color: transparent; font-style: normal; }
 .hero__copy > p:not(.hero__note) { max-width: 690px; margin: 28px auto 34px; color: var(--muted); font-size: 18px; line-height: 1.7; }
-.hero__commercial-promises { position: relative; max-width: 760px; margin: -7px auto 22px; overflow: hidden; border-block: 1px solid rgba(0,219,233,.32); background: linear-gradient(90deg, transparent, rgba(0,219,233,.065) 18%, rgba(0,219,233,.065) 82%, transparent); }
+.hero__commercial-promises { position: relative; display: grid; gap: 3px; max-width: 760px; margin: -7px auto 22px; overflow: hidden; background: linear-gradient(90deg, transparent, rgba(0,219,233,.065) 18%, rgba(0,219,233,.065) 82%, transparent); }
 .hero__commercial-promises::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(0,219,233,.07), transparent 62%); pointer-events: none; }
 .hero__promise { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: center; min-height: 58px; padding: 11px 24px; text-align: left; }
-.hero__promise + .hero__promise { border-top: 1px solid rgba(255,255,255,.075); }
 .hero__promise > span { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(0,219,233,.32); border-radius: 50%; background: rgba(0,219,233,.08); color: var(--mint); box-shadow: 0 0 18px rgba(0,219,233,.08); }
 .hero__promise p { margin: 0; color: #aebfc0; font-size: 14px; line-height: 1.45; }
 .hero__promise strong { color: #dffafb; font-weight: 750; }
