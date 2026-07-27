@@ -1,8 +1,6 @@
-# vinext-starter
+# HB Digital Studio
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Sitio comercial de HB Digital Studio construido con React, Vite y Vinext.
 
 ## Prerequisites
 
@@ -14,6 +12,24 @@ Drizzle support.
 npm install
 npm run dev
 npm run build
+```
+
+## Publicar en Vercel
+
+El proyecto incluye `vercel.json` y una configuración de Vite específica para
+Vercel mediante Nitro. El build genera automáticamente la estructura
+`.vercel/output` que Vercel utiliza para publicar archivos y funciones.
+
+1. Subí este repositorio a GitHub, GitLab o Bitbucket.
+2. En Vercel elegí **Add New → Project** e importá el repositorio.
+3. No cambies la configuración detectada: el repositorio ya define el comando
+   `npm run build:vercel` y genera la salida que Vercel necesita.
+4. Presioná **Deploy**.
+
+También podés desplegarlo desde la raíz con la CLI de Vercel:
+
+```bash
+npx vercel
 ```
 
 This starter does not use `wrangler.jsonc`.
