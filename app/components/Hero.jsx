@@ -1,4 +1,4 @@
-import { ArrowDown, BadgeDollarSign, CheckCircle2, MousePointerClick } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BadgeDollarSign, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui";
 
 export default function Hero() {
@@ -18,34 +18,16 @@ export default function Hero() {
           <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
 
-        <div className="showcase" aria-label="Representación de una página web adaptable a notebook y celular">
+        <div className="showcase" aria-label="Invitación a conocer HB Digital Studio en Instagram junto a una representación mobile">
           <div className="showcase__glow" />
-          <div className="laptop">
-            <div className="laptop__top">
-              <div className="browser-bar"><i /><i /><i /><span>tumarca.com</span></div>
-              <div className="mock-nav"><b>TuMarca.</b><span /><span /><button>Contactar</button></div>
-              <div className="mock-hero">
-                <div className="mock-copy">
-                  <small>Presencia digital que genera oportunidades</small>
-                  <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
-                  <p>Mostrá tu valor, generá confianza y convertí cada visita en una nueva consulta.</p>
-                  <button>Quiero más clientes <MousePointerClick size={12} /></button>
-                </div>
-                <div className="mock-growth">
-                  <small>Una web preparada para crecer</small>
-                  <div><b>+</b><span>Alcance</span></div>
-                  <div><b>+</b><span>Consultas</span></div>
-                  <div><b>+</b><span>Oportunidades</span></div>
-                  <p className="mock-growth__status"><CheckCircle2 size={11} />Protegida y online</p>
-                </div>
-              </div>
-              <div className="mock-stats">
-                <span><img src="/icons8-amazon-web-services-48.png" alt="" /><b>AWS</b><small>Cloud</small></span>
-                <span><img src="/icons8-cloudflare-48.png" alt="" /><b>Cloudflare</b><small>Protección</small></span>
-                <span><img src="/icons8-candado-50.png" alt="" /><b>SSL/TLS</b><small>Seguridad</small></span>
-                <span><img src="/icons8-búsqueda-50.png" alt="" /><b>SEO</b><small>Visibilidad</small></span>
-              </div>
-            </div>
+          <div className="social-showcase">
+            <span className="social-showcase__eyebrow"><img src="/icons8-instagram-50.png" alt="" />Seguinos en Instagram</span>
+            <h2>Conocé más de <em>nuestro trabajo.</em></h2>
+            <p>Compartimos proyectos, ideas y procesos reales para ayudarte a imaginar todo lo que tu negocio puede lograr online.</p>
+            <div className="social-showcase__topics"><span>Proyectos reales</span><span>Ideas para crecer</span><span>Detrás del desarrollo</span></div>
+            <a className="social-showcase__button" href="https://www.instagram.com/hb.digitalstudio" target="_blank" rel="noreferrer">
+              <img src="/icons8-instagram-50.png" alt="" /><span>Ver @hb.digitalstudio</span><ArrowUpRight size={17} />
+            </a>
           </div>
 
           <div className="phone">
