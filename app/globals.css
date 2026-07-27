@@ -230,6 +230,8 @@ button { font: inherit; }
 .plan-card ul { display: grid; gap: 6px; padding: 24px 0 0; margin: 0; list-style: none; }
 .plan-card li { display: flex; gap: 9px; align-items: flex-start; min-height: 38px; padding: 5px 0; color: #c0cbcc; font-size: 13px; line-height: 1.4; }
 .plan-card li svg { flex: 0 0 auto; color: var(--mint); }
+.plan-card li.plan-card__timeline { align-items: center; min-height: 42px; margin: 3px 0 7px; padding: 9px 11px; border: 1px solid rgba(0,219,233,.24); border-radius: 9px; background: linear-gradient(90deg, rgba(0,219,233,.1), rgba(0,219,233,.025)); color: #d8f7f8; font-weight: 720; box-shadow: inset 3px 0 0 rgba(0,219,233,.58); }
+.plan-card li.plan-card__timeline svg { filter: drop-shadow(0 0 7px rgba(0,219,233,.35)); }
 .plan-card__info-row { display: flex; align-items: center; min-height: 46px; margin-top: 8px; }
 .plan-card__info { display: flex; align-items: center; gap: 7px; padding: 0; border: 0; background: transparent; color: var(--mint-dark); font-size: 12px; font-weight: 680; text-align: left; cursor: pointer; }
 .button--plan { width: 100%; margin-top: auto; border: 1px solid var(--line); background: transparent; color: var(--ink); }
@@ -415,6 +417,7 @@ button { font: inherit; }
   .plan-card ul { gap: 3px; padding-top: 18px; }
   .plan-card li { min-height: 0; padding: 4px 0; font-size: 12px; line-height: 1.35; }
   .plan-card li svg { width: 15px; height: 15px; }
+  .plan-card li.plan-card__timeline { min-height: 38px; margin-block: 3px 6px; padding: 8px 10px; }
   .plan-card__info-row { min-height: 39px; margin-top: 7px; }
   .plan-card__info { font-size: 11px; }
   .button--plan { min-height: 48px; margin-top: 12px; font-size: 13px; }
