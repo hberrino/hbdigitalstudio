@@ -10,13 +10,12 @@ export function SectionHeading({ eyebrow, title, text, align = "left", light = f
   );
 }
 
-export function Button({ href, children, variant = "primary", className = "", ariaLabel, iconSrc, icon }) {
+export function Button({ href, children, variant = "primary", className = "", ariaLabel, iconSrc, showArrow = true }) {
   return (
     <a className={`button button--${variant} ${className}`} href={href} aria-label={ariaLabel}>
       {iconSrc && <img className="button__image-icon" src={iconSrc} alt="" aria-hidden="true" />}
-      {!iconSrc && icon && <span className="button__icon" aria-hidden="true">{icon}</span>}
       <span>{children}</span>
-      {!iconSrc && !icon && <ArrowUpRight size={18} aria-hidden="true" />}
+      {!iconSrc && showArrow && <ArrowUpRight size={18} aria-hidden="true" />}
     </a>
   );
 }

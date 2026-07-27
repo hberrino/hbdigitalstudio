@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowUpRight, BadgeDollarSign, CheckCircle2, LayoutGrid, MousePointerClick } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BadgeDollarSign, CheckCircle2 } from "lucide-react";
 import { Button } from "./ui";
 
 export default function Hero() {
@@ -15,8 +15,8 @@ export default function Hero() {
             <div className="hero__promise"><span><CheckCircle2 size={19} /></span><p>Tu tranquilidad forma parte del proyecto: <strong>terminás de abonar cuando el resultado cumple.</strong></p></div>
           </div>
           <div className="hero__actions">
-            <Button href="#contacto" className="hero__cta hero__cta--primary" icon={<MousePointerClick size={19} />}>Quiero mi página web</Button>
-            <Button href="#planes" variant="secondary" className="hero__cta hero__cta--plans" icon={<LayoutGrid size={18} />}>Ver planes</Button>
+            <Button href="#contacto" className="hero__cta hero__cta--primary" showArrow={false}>Quiero mi página web</Button>
+            <Button href="#planes" variant="secondary" className="hero__cta hero__cta--plans" showArrow={false}>Ver planes</Button>
           </div>
           <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
