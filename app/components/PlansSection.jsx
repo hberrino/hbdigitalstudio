@@ -46,8 +46,15 @@ export default function PlansSection() {
   }
 
   return (
-    <section className="plans section" id="planes"><div className="container">
-      <p className="plans__promo"><span />Aprovechá un 50% OFF por tiempo limitado</p>
+    <section className="plans section" id="planes">
+      <div className="plans__marquee" aria-label="Promoción: abonás únicamente si el resultado es el que esperabas. Aprovechá 50% OFF por tiempo limitado en todos nuestros planes.">
+        <div className="plans__marquee-track" aria-hidden="true">
+          {[0, 1, 2, 3].map((item) => (
+            <span key={item}>Abonás únicamente si el resultado es el que esperabas <i /> Aprovechá <strong>50% OFF</strong> por tiempo limitado en todos nuestros planes</span>
+          ))}
+        </div>
+      </div>
+      <div className="container">
       <SectionHeading
         eyebrow="Planes"
         title="Elegí la solución adecuada para tu negocio"

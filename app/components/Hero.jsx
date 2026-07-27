@@ -25,6 +25,10 @@ export default function Hero() {
                 <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
                 <p>Mostrá el valor de tu marca y convertí cada visita en una nueva consulta.</p>
                 <button>Quiero más consultas <MousePointerClick size={12} /></button>
+                <div className="mock-assurance">
+                  <span>Compromiso con el resultado</span>
+                  <b>Terminás de abonar cuando el resultado <em>te gusta.</em></b>
+                </div>
               </div>
               <div className="mock-stats">
                 <span><img src="/icons8-amazon-web-services-48.png" alt="" /><b>AWS</b><small>Cloud</small></span>
