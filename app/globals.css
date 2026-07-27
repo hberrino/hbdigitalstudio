@@ -46,17 +46,19 @@ button { font: inherit; }
 .reveal.is-visible { opacity: 1; transform: none; }
 
 /* Navigation */
-.navbar { position: fixed; z-index: 100; inset: 0 0 auto; height: 74px; background: rgba(12, 14, 18, .78); border-bottom: 1px solid rgba(255, 255, 255, .09); box-shadow: 0 0 28px rgba(0,219,233,.05); backdrop-filter: blur(18px); }
+.navbar { position: fixed; z-index: 100; inset: 0 0 auto; height: 74px; background: linear-gradient(90deg, rgba(20,24,29,.9), rgba(23,31,35,.84) 50%, rgba(20,24,29,.9)); border-bottom: 1px solid rgba(0,219,233,.14); box-shadow: 0 8px 32px rgba(0,0,0,.16), 0 0 28px rgba(0,219,233,.045); backdrop-filter: blur(18px); }
 .navbar__inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: 11px; font-family: var(--font-manrope), sans-serif; font-weight: 780; font-size: 16px; letter-spacing: -.02em; }
 .brand--logo { gap: 0; line-height: 0; }
 .brand__logo-viewport { position: relative; display: block; width: 54px; height: 56px; overflow: hidden; background: transparent; }
 .brand__logo-viewport img { position: absolute; top: 50%; left: 50%; width: 62px; max-width: none; height: auto; transform: translate(-50%, -50%); filter: drop-shadow(0 2px 5px rgba(0,219,233,.16)); }
 .brand__mark { display: grid; place-items: center; width: 35px; height: 35px; border-radius: 9px; background: rgba(0,219,233,.12); border: 1px solid rgba(0,219,233,.35); color: var(--mint); font-size: 12px; letter-spacing: -.04em; }
-.navbar__nav { display: flex; align-items: center; gap: 28px; color: #b9cacb; font-size: 13px; font-weight: 580; }
-.navbar__nav > a:not(.button) { transition: color .2s ease; }
-.navbar__nav > a:not(.button):hover { color: var(--mint); }
-.navbar__cta { min-height: 42px; padding-inline: 16px; color: #00363a !important; }
+.navbar__nav { display: flex; align-items: center; gap: 28px; color: #d0dfe0; font-family: var(--font-manrope), sans-serif; font-size: 14px; font-weight: 650; letter-spacing: -.012em; }
+.navbar__nav > a:not(.button) { position: relative; padding-block: 10px; transition: color .2s ease; }
+.navbar__nav > a:not(.button)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 4px; height: 1px; background: var(--mint); box-shadow: 0 0 8px rgba(0,219,233,.55); transition: right .22s ease; }
+.navbar__nav > a:not(.button):hover { color: #efffff; }
+.navbar__nav > a:not(.button):hover::after { right: 0; }
+.navbar__cta { min-height: 42px; padding-inline: 17px; color: #00363a !important; font-size: 13px; letter-spacing: -.01em; }
 .navbar__toggle { display: none; border: 0; background: transparent; color: var(--ink); padding: 6px; }
 
 /* Hero */
@@ -328,9 +330,11 @@ button { font: inherit; }
   .navbar { height: 66px; }
   .navbar__toggle { display: block; }
   .navbar__cta { display: none; }
-  .navbar__nav { position: absolute; top: 65px; left: 14px; right: 14px; display: grid; gap: 0; padding: 12px; visibility: hidden; opacity: 0; transform: translateY(-10px); border: 1px solid var(--line); border-radius: 14px; background: rgba(26,28,32,.98); box-shadow: var(--shadow); transition: .2s ease; }
+  .navbar__nav { position: absolute; top: 65px; left: 14px; right: 14px; display: grid; gap: 0; padding: 12px; visibility: hidden; opacity: 0; transform: translateY(-10px); border: 1px solid rgba(0,219,233,.18); border-radius: 14px; background: linear-gradient(145deg, rgba(30,37,42,.98), rgba(23,27,32,.98)); box-shadow: var(--shadow); transition: .2s ease; }
   .navbar__nav.is-open { visibility: visible; opacity: 1; transform: none; }
-  .navbar__nav > a:not(.button) { display: block; padding: 13px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .navbar__nav > a:not(.button) { display: block; padding: 14px 13px; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 15px; }
+  .navbar__nav > a:not(.button)::after { display: none; }
+  .navbar__nav > a:not(.button):hover { color: var(--mint); background: rgba(0,219,233,.045); }
   .brand__logo-viewport { width: 48px; height: 50px; }
   .brand__logo-viewport img { width: 55px; }
   .hero { min-height: auto; padding: 120px 0 80px; }
