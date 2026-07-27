@@ -159,14 +159,19 @@ button { font: inherit; }
 
 /* Process */
 .process { background: #0f1115; }
-.process__line { position: relative; max-width: 900px; margin: 0 auto; }
-.process__line::before { content: ""; position: absolute; left: 37px; top: 37px; bottom: 37px; width: 1px; background: rgba(0,219,233,.18); }
-.process-step { position: relative; z-index: 1; display: grid; grid-template-columns: 76px 1fr; min-height: 150px; }
-.process-step__number { display: grid; place-items: center; align-self: start; width: 76px; height: 76px; border: 1px solid rgba(0,219,233,.3); border-radius: 50%; background: #17191e; color: var(--mint); font-family: var(--font-manrope); font-size: 15px; font-weight: 750; transition: background .2s ease, color .2s ease, box-shadow .2s ease; }
+.process__line { position: relative; max-width: 1080px; margin: 0 auto; }
+.process__line::before { content: ""; position: absolute; left: 50%; top: 27px; bottom: 27px; width: 1px; background: linear-gradient(180deg, rgba(0,219,233,.06), rgba(0,219,233,.42) 12%, rgba(0,219,233,.42) 88%, rgba(0,219,233,.06)); transform: translateX(-50%); }
+.process-step { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) 100px minmax(0,1fr); min-height: 170px; }
+.process-step::after { content: ""; position: absolute; top: 27px; width: 42px; height: 1px; background: rgba(0,219,233,.42); }
+.process-step:nth-child(odd)::after { right: 50%; }
+.process-step:nth-child(even)::after { left: 50%; }
+.process-step__number { display: grid; grid-column: 2; grid-row: 1; place-items: center; justify-self: center; align-self: start; width: 54px; height: 54px; border: 1px solid rgba(0,219,233,.42); border-radius: 50%; background: #17191e; color: var(--mint); font-family: var(--font-manrope); font-size: 13px; font-weight: 750; box-shadow: 0 0 0 7px #0f1115; transition: background .2s ease, color .2s ease, box-shadow .2s ease; }
 .process-step:hover .process-step__number { background: rgba(0,219,233,.12); color: var(--mint); box-shadow: 0 0 25px rgba(0,219,233,.16); }
-.process-step__body { padding: 8px 0 30px 42px; }
+.process-step__body { grid-row: 1; max-width: 420px; padding-top: 3px; }
+.process-step:nth-child(odd) .process-step__body { grid-column: 1; justify-self: end; padding-right: 48px; text-align: right; }
+.process-step:nth-child(even) .process-step__body { grid-column: 3; justify-self: start; padding-left: 48px; text-align: left; }
 .process-step__body h3 { font-size: 22px; }
-.process-step__body p { max-width: 600px; font-size: 15px; }
+.process-step__body p { max-width: 420px; font-size: 15px; }
 .process-step__status { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 7px 11px; border: 1px solid rgba(0,219,233,.28); border-radius: 999px; background: rgba(0,219,233,.08); color: var(--mint); font-size: 10px; font-weight: 800; letter-spacing: .14em; }
 .process-step__status i { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 12px rgba(0,219,233,.8); }
 
@@ -344,10 +349,12 @@ button { font: inherit; }
   .benefits__track { gap: 10px; padding-inline: 28px; }
   .benefit-card { flex-basis: min(82vw, 300px); min-height: 175px; padding: 23px; }
   .benefit-card__icon { height: 27px; margin-bottom: 24px; }
-  .process__line::before { left: 27px; }
-  .process-step { grid-template-columns: 55px 1fr; min-height: 160px; }
-  .process-step__number { width: 55px; height: 55px; }
-  .process-step__body { padding: 4px 0 28px 22px; }
+  .process__line::before { left: 27px; top: 27px; bottom: 27px; transform: none; }
+  .process-step { grid-template-columns: 55px minmax(0,1fr); min-height: 160px; }
+  .process-step::after { display: none; }
+  .process-step__number { grid-column: 1; width: 55px; height: 55px; box-shadow: 0 0 0 6px #0f1115; }
+  .process-step:nth-child(odd) .process-step__body,
+  .process-step:nth-child(even) .process-step__body { grid-column: 2; grid-row: 1; justify-self: stretch; max-width: none; padding: 4px 0 28px 22px; text-align: left; }
   .process-step__body h3 { font-size: 19px; }
   .technology__grid { grid-template-columns: 1fr; gap: 45px; }
   .plans__grid { display: flex; max-width: none; margin: 55px -14px 0; padding: 20px calc((100vw - clamp(275px, 78vw, 340px)) / 2) 25px; gap: 12px; overflow-x: auto; align-items: stretch; scroll-snap-type: x mandatory; scroll-padding-inline: calc((100vw - clamp(275px, 78vw, 340px)) / 2); overscroll-behavior-x: contain; scrollbar-width: none; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; }
