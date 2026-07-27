@@ -1,4 +1,4 @@
-import { ArrowDown, CheckCircle2, MousePointerClick } from "lucide-react";
+import { ArrowDown, BadgeDollarSign, CheckCircle2, MousePointerClick } from "lucide-react";
 import { Button } from "./ui";
 
 export default function Hero() {
@@ -10,7 +10,10 @@ export default function Hero() {
           <span className="eyebrow">Desarrollo web para negocios que quieren crecer</span>
           <h1>Transformamos tu negocio en una experiencia digital <em>profesional.</em></h1>
           <p>Diseñamos y desarrollamos páginas web pensadas para atraer clientes, fortalecer tu marca y acompañar el crecimiento de tu negocio.</p>
-          <div className="hero__payment-note"><CheckCircle2 size={16} /><span>Tu tranquilidad forma parte del proyecto: <strong>terminás de abonar cuando el resultado te gusta.</strong></span></div>
+          <div className="hero__commercial-promises">
+            <div className="hero__promise"><span><BadgeDollarSign size={19} /></span><p>Planes accesibles para llevar tu negocio a la web <strong>sin resignar seguridad, calidad ni rendimiento.</strong></p></div>
+            <div className="hero__promise"><span><CheckCircle2 size={19} /></span><p>Tu tranquilidad forma parte del proyecto: <strong>terminás de abonar cuando el resultado te gusta.</strong></p></div>
+          </div>
           <div className="hero__actions"><Button href="#contacto">Quiero mi página web</Button><Button href="#planes" variant="secondary">Ver planes</Button></div>
           <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
