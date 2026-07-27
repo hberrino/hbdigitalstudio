@@ -1,12 +1,11 @@
-import { LockKeyhole, Search, Smartphone } from "lucide-react";
 import { SectionHeading } from "./ui";
 
 const badges = [
   { label: "AWS", image: "/icons8-amazon-web-services-48.png" },
   { label: "Cloudflare", image: "/icons8-cloudflare-48.png" },
-  { label: "SSL/TLS", icon: LockKeyhole },
-  { label: "Responsive", icon: Smartphone },
-  { label: "SEO", icon: Search },
+  { label: "SSL/TLS", image: "/icons8-candado-50.png" },
+  { label: "Responsive", image: "/icons8-teléfono-celular-64.png" },
+  { label: "SEO", image: "/icons8-búsqueda-50.png" },
 ];
 
 const details = [
@@ -27,8 +26,8 @@ export default function TechnologySection() {
           light
         />
         <div className="technology__badges">
-          {badges.map(({ label, image, icon: Icon }) => (
-            <span key={label}>{image ? <img src={image} alt="" /> : <Icon size={17} />}{label}</span>
+          {badges.map(({ label, image }) => (
+            <span key={label}><img src={image} alt="" />{label}</span>
           ))}
         </div>
       </div>
