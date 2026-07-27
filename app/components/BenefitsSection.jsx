@@ -69,7 +69,7 @@ export default function BenefitsSection() {
   }
 
   function onPointerDown(event) {
-    if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
     pause();
     dragRef.current = {
       active: true,
@@ -120,6 +120,9 @@ export default function BenefitsSection() {
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
             onPointerCancel={onPointerUp}
+            onTouchStart={pause}
+            onTouchEnd={() => resume(1600)}
+            onTouchCancel={() => resume(1600)}
           >
             <div className="benefits__track">
               {[0, 1, 2].map((setIndex) =>
