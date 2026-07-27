@@ -16,7 +16,7 @@ export const plans = [
     eyebrow: "Para empezar a destacar en internet",
     description: "Una página profesional para presentar tu negocio, tus servicios y facilitar el contacto con potenciales clientes.",
     timeline: "Tiempo estimado: 1 semana",
-    features: ["Landing page o web informativa", "Diseño personalizado y responsive", "WhatsApp, redes y formulario de contacto", "SEO técnico y velocidad optimizada", "Dominio personalizado y SSL/TLS", "Alojamiento AWS y protección Cloudflare", "Soporte posterior a la publicación", "Actualizaciones y mejoras requeridas"],
+    features: ["Web completa para tu negocio", "Diseño personalizado y responsive", "WhatsApp, redes y formulario de contacto", "SEO técnico y velocidad optimizada", "Dominio personalizado y SSL/TLS", "Alojamiento AWS y protección Cloudflare", "Soporte posterior a la publicación", "Actualizaciones y mejoras requeridas"],
     message: "Hola, quiero consultar sobre el Plan Impacto.",
   },
   {
