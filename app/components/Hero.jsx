@@ -30,16 +30,34 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="phone">
-            <div className="phone__speaker" />
-            <div className="phone__content">
-              <div className="phone__brand"><b>TuMarca.</b><span><i /> online</span></div>
-              <small className="phone__eyebrow">Tu negocio en cada pantalla</small>
-              <strong>Más alcance.<br />Más <em>clientes.</em></strong>
-              <p className="phone__copy">Disponible 24/7 para transformar visitas en consultas.</p>
-              <button>Consultar ahora</button>
-              <div className="phone__metrics"><span><b>+</b><small>Consultas</small></span><span><b>24/7</b><small>Disponible</small></span></div>
-              <div className="phone__card"><CheckCircle2 size={14} /> Sitio seguro y responsive</div>
+          <div className="device-showcase">
+            <div className="tablet">
+              <span className="tablet__camera" />
+              <div className="tablet__screen">
+                <div className="tablet__brand"><b>TuMarca.</b><span><i /> creciendo online</span></div>
+                <small>Una presencia que potencia tu negocio</small>
+                <strong>Más oportunidades.<br /><em>Mejores resultados.</em></strong>
+                <div className="tablet__metrics">
+                  <span><b>+</b><small>Clientes</small></span>
+                  <span><b>+</b><small>Alcance</small></span>
+                  <span><b>+</b><small>Posicionamiento</small></span>
+                  <span><b>+</b><small>Profesionalidad</small></span>
+                </div>
+                <p><CheckCircle2 size={10} /> Presencia segura, rápida y disponible</p>
+              </div>
+            </div>
+
+            <div className="phone">
+              <div className="phone__speaker" />
+              <div className="phone__content">
+                <div className="phone__brand"><b>TuMarca.</b><span><i /> online</span></div>
+                <small className="phone__eyebrow">Tu negocio en cada pantalla</small>
+                <strong>Más alcance.<br />Más <em>clientes.</em></strong>
+                <p className="phone__copy">Disponible 24/7 para transformar visitas en consultas.</p>
+                <button>Consultar ahora</button>
+                <div className="phone__metrics"><span><b>+</b><small>Consultas</small></span><span><b>24/7</b><small>Disponible</small></span></div>
+                <div className="phone__card"><CheckCircle2 size={14} /> Sitio seguro y responsive</div>
+              </div>
             </div>
           </div>
         </div>
