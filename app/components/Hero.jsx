@@ -23,17 +23,20 @@ export default function Hero() {
           <div className="laptop">
             <div className="laptop__top">
               <div className="browser-bar"><i /><i /><i /><span>tumarca.com</span></div>
-              <div className="mock-nav"><b>marca.</b><span /><span /><button>Contactar</button></div>
+              <div className="mock-nav"><b>TuMarca.</b><span /><span /><button>Contactar</button></div>
               <div className="mock-hero">
-                <small>Presencia digital que genera oportunidades</small>
-                <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
-                <p>Mostrá el valor de tu marca y convertí cada visita en una nueva consulta.</p>
-                <button>Quiero más consultas <MousePointerClick size={12} /></button>
+                <div className="mock-copy">
+                  <small>Presencia digital que genera oportunidades</small>
+                  <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
+                  <p>Mostrá tu valor, generá confianza y convertí cada visita en una nueva consulta.</p>
+                  <button>Quiero más clientes <MousePointerClick size={12} /></button>
+                </div>
                 <div className="mock-growth">
-                  <small>Una web que impulsa tu negocio</small>
+                  <small>Una web preparada para crecer</small>
                   <div><b>+</b><span>Alcance</span></div>
                   <div><b>+</b><span>Consultas</span></div>
                   <div><b>+</b><span>Oportunidades</span></div>
+                  <p className="mock-growth__status"><CheckCircle2 size={11} />Protegida y online</p>
                 </div>
               </div>
               <div className="mock-stats">
@@ -48,15 +51,15 @@ export default function Hero() {
           <div className="phone">
             <div className="phone__speaker" />
             <div className="phone__content">
-              <div className="phone__brand">marca.</div>
-              <span>Disponible desde cualquier lugar</span>
-              <strong>Tu negocio,<br />en la mano de <em>tus clientes.</em></strong>
+              <div className="phone__brand"><b>TuMarca.</b><span><i /> online</span></div>
+              <small className="phone__eyebrow">Tu negocio en cada pantalla</small>
+              <strong>Más alcance.<br />Más <em>clientes.</em></strong>
+              <p className="phone__copy">Disponible 24/7 para transformar visitas en consultas.</p>
               <button>Consultar ahora</button>
-              <div className="phone__card"><CheckCircle2 size={14} /> Seguro y responsive</div>
+              <div className="phone__metrics"><span><b>+</b><small>Consultas</small></span><span><b>24/7</b><small>Disponible</small></span></div>
+              <div className="phone__card"><CheckCircle2 size={14} /> Sitio seguro y responsive</div>
             </div>
           </div>
-
-          <div className="floating-card"><CheckCircle2 size={18} /><span><small>Infraestructura</small>Protegida y online</span></div>
         </div>
       </div>
       <a href="#problema" className="scroll-hint" aria-label="Ir a la siguiente sección"><ArrowDown size={18} /></a>
