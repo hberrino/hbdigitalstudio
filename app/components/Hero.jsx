@@ -11,7 +11,7 @@ export default function Hero() {
           <h1>Transformamos tu negocio en una experiencia digital <em>profesional.</em></h1>
           <p>Diseñamos y desarrollamos páginas web pensadas para atraer clientes, fortalecer tu marca y acompañar el crecimiento de tu negocio.</p>
           <div className="hero__actions"><Button href="#contacto">Quiero mi página web</Button><Button href="#planes" variant="secondary">Ver planes</Button></div>
-          <p className="hero__note"><span /> Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</p>
+          <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
 
         <div className="showcase" aria-label="Representación de una página web adaptable a notebook y celular">
