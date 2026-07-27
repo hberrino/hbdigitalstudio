@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   title: "HB Digital Studio | Desarrollo web para negocios",
   description: "Diseñamos páginas web y sistemas personalizados para negocios que quieren crecer.",
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [{ url: "/logohb.png", type: "image/png" }],
+    shortcut: "/logohb.png",
+    apple: "/logohb.png",
   },
   openGraph: {
     title: "HB Digital Studio",
