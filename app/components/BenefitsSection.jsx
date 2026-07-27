@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import { benefits } from "../data/benefits";
 import { SectionHeading } from "./ui";

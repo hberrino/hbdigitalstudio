@@ -1,114 +1,90 @@
 # HB Digital Studio
 
-Sitio comercial de HB Digital Studio construido con React, Vite y Vinext.
+Landing comercial estática de HB Digital Studio. Está construida con React y
+Vite, se pre-renderiza durante el build y puede servirse directamente con
+Nginx, sin mantener Node.js ejecutándose en producción.
 
-## Prerequisites
+## Desarrollo local
 
-- Node.js `>=22.13.0`
-
-## Quick Start
+Requiere Node.js `>=22.13.0`.
 
 ```bash
-npm install
+npm ci
 npm run dev
-npm run build
 ```
 
-## Publicar en Vercel
-
-El proyecto incluye `vercel.json` y una configuración de Vite específica para
-Vercel mediante Nitro. El build genera automáticamente la estructura
-`.vercel/output` que Vercel utiliza para publicar archivos y funciones.
-
-1. Subí este repositorio a GitHub, GitLab o Bitbucket.
-2. En Vercel elegí **Add New → Project** e importá el repositorio.
-3. No cambies la configuración detectada: el repositorio ya define el comando
-   `npm run build:vercel` y genera la salida que Vercel necesita.
-4. Presioná **Deploy**.
-
-También podés desplegarlo desde la raíz con la CLI de Vercel:
+## Comprobar la versión de producción
 
 ```bash
-npx vercel
+npm test
 ```
 
-This starter does not use `wrangler.jsonc`.
+El comando genera `dist/`, valida que el HTML incluya el contenido comercial y
+comprueba los recursos utilizados por la página.
 
-## Included Shape
+## Publicar en una VPS Ubuntu con Nginx
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+### 1. Instalar las herramientas
 
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+sudo apt update
+sudo apt install -y nginx rsync
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+Node.js solo es necesario para generar `dist/`. Puede instalarse en la VPS o el
+build puede generarse en otra computadora y copiarse ya compilado.
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+### 2. Generar y copiar la web
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+Desde la raíz del proyecto:
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+```bash
+npm ci
+npm run build
+sudo mkdir -p /var/www/hbdigitalstudio
+sudo rsync -a --delete dist/ /var/www/hbdigitalstudio/
+```
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+### 3. Activar la configuración de Nginx
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+```bash
+sudo cp deploy/nginx/hbdigitalstudio.conf /etc/nginx/sites-available/hbdigitalstudio
+sudo ln -s /etc/nginx/sites-available/hbdigitalstudio /etc/nginx/sites-enabled/hbdigitalstudio
+sudo rm -f /etc/nginx/sites-enabled/default
+sudo nginx -t
+sudo systemctl reload nginx
+```
 
-## Useful Commands
+La configuración inicial usa `server_name _;`, por lo que funciona directamente
+con la IP pública. Cuando el dominio apunte a la VPS, reemplazá `_` por el
+dominio y su variante `www`, por ejemplo:
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+```nginx
+server_name ejemplo.com www.ejemplo.com;
+```
 
-## Learn More
+### 4. Agregar HTTPS cuando el dominio esté configurado
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+```bash
+sudo apt install -y certbot python3-certbot-nginx
+sudo certbot --nginx -d ejemplo.com -d www.ejemplo.com
+```
+
+Certbot obtiene el certificado, configura la redirección HTTPS y programa su
+renovación automática.
+
+## Actualizaciones posteriores
+
+Después de cada cambio:
+
+```bash
+git pull origin main
+npm ci
+npm test
+sudo rsync -a --delete dist/ /var/www/hbdigitalstudio/
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+Los archivos de la web se sirven con caché prolongada y nombres versionados.
+El HTML no se cachea, así cada publicación aparece inmediatamente.

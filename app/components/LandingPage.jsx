@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import BenefitsSection from "./BenefitsSection";
 import FaqSection from "./FaqSection";

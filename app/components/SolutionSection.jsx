@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
 import { Blocks, Headphones, LockKeyhole, Palette, Search, Target, X } from "lucide-react";
 import { SectionHeading } from "./ui";
