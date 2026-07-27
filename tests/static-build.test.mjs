@@ -14,6 +14,7 @@ test("genera una landing estática completa para Nginx", async () => {
   assert.match(html, /Diseñamos y desarrollamos páginas web/);
   assert.match(html, /terminás de abonar cuando el resultado cumple/);
   assert.match(html, /Web completa para tu negocio/);
+  assert.match(html, /https:\/\/hbdigitalstudio\.com\/og-hb-digital-studio\.png/);
   assert.ok(assets.some((file) => file.endsWith(".js")));
   assert.ok(assets.some((file) => file.endsWith(".css")));
   await access(new URL("fonts/geist-latin.woff2", distRoot));
@@ -24,7 +25,7 @@ test("genera una landing estática completa para Nginx", async () => {
 test("conserva los recursos comerciales utilizados por la interfaz", async () => {
   const requiredAssets = [
     "logohb.png",
-    "og.png",
+    "og-hb-digital-studio.png",
     "icons8-amazon-web-services-48.png",
     "icons8-búsqueda-50.png",
     "icons8-candado-50.png",
