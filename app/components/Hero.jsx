@@ -10,6 +10,7 @@ export default function Hero() {
           <span className="eyebrow">Desarrollo web para negocios que quieren crecer</span>
           <h1>Transformamos tu negocio en una experiencia digital <em>profesional.</em></h1>
           <p>Diseñamos y desarrollamos páginas web pensadas para atraer clientes, fortalecer tu marca y acompañar el crecimiento de tu negocio.</p>
+          <div className="hero__payment-note"><CheckCircle2 size={16} /><span>Tu tranquilidad forma parte del proyecto: <strong>terminás de abonar cuando el resultado te gusta.</strong></span></div>
           <div className="hero__actions"><Button href="#contacto">Quiero mi página web</Button><Button href="#planes" variant="secondary">Ver planes</Button></div>
           <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
@@ -25,9 +26,11 @@ export default function Hero() {
                 <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
                 <p>Mostrá el valor de tu marca y convertí cada visita en una nueva consulta.</p>
                 <button>Quiero más consultas <MousePointerClick size={12} /></button>
-                <div className="mock-assurance">
-                  <span>Compromiso con el resultado</span>
-                  <b>Terminás de abonar cuando el resultado <em>te gusta.</em></b>
+                <div className="mock-growth">
+                  <small>Una web que impulsa tu negocio</small>
+                  <div><b>+</b><span>Alcance</span></div>
+                  <div><b>+</b><span>Consultas</span></div>
+                  <div><b>+</b><span>Oportunidades</span></div>
                 </div>
               </div>
               <div className="mock-stats">

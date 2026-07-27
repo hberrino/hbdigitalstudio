@@ -67,6 +67,9 @@ button { font: inherit; }
 .hero__copy h1 { max-width: 980px; margin: 0 auto; font-family: var(--font-manrope), sans-serif; font-size: clamp(48px, 6.2vw, 82px); line-height: 1; letter-spacing: -.06em; }
 .hero__copy h1 em, .problem__intro h2 em, .mock-hero em, .phone__content em { background: linear-gradient(90deg, var(--mint), var(--purple)); -webkit-background-clip: text; background-clip: text; color: transparent; font-style: normal; }
 .hero__copy > p:not(.hero__note) { max-width: 690px; margin: 28px auto 34px; color: var(--muted); font-size: 18px; line-height: 1.7; }
+.hero__payment-note { display: flex; align-items: center; justify-content: center; gap: 8px; max-width: 650px; margin: -7px auto 20px; color: #9fafb0; font-size: 13px; line-height: 1.45; }
+.hero__payment-note svg { flex: 0 0 auto; color: var(--mint); filter: drop-shadow(0 0 8px rgba(0,219,233,.35)); }
+.hero__payment-note strong { color: #d4e5e6; font-weight: 720; }
 .hero__actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 .hero__note { display: flex; justify-content: center; gap: 10px; align-items: center; margin: 28px 0 0; color: #9fafb0; font-size: 13px; }
 .hero__note i { flex: 0 0 auto; width: 8px; height: 8px; background: #43e66d; border-radius: 50%; box-shadow: 0 0 0 5px rgba(67,230,109,.12), 0 0 14px rgba(67,230,109,.55); animation: status-pulse 1.8s ease-in-out infinite; }
@@ -90,10 +93,13 @@ button { font: inherit; }
 .mock-hero strong { display: block; margin: 9px 0; font-family: var(--font-manrope), sans-serif; font-size: 24px; line-height: .98; letter-spacing: -.06em; }
 .mock-hero p { max-width: 190px; margin: 0 0 12px; color: #718078; font-size: 7px; line-height: 1.5; }
 .mock-hero button { display: flex; gap: 5px; align-items: center; }
-.mock-assurance { position: absolute; top: 50%; left: 55%; width: 29%; padding: 13px 15px; border-left: 2px solid var(--mint); background: linear-gradient(90deg, rgba(0,219,233,.075), transparent); transform: translateY(-50%); }
-.mock-assurance span { display: block; margin-bottom: 8px; color: #718c80; font-size: 5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-.mock-assurance b { display: block; color: #dce8e1; font-family: var(--font-manrope); font-size: 11px; line-height: 1.18; letter-spacing: -.035em; }
-.mock-assurance b em { font-style: normal; }
+.mock-growth { position: absolute; top: 50%; left: 55%; width: 30%; padding: 12px 14px; border-left: 2px solid rgba(0,219,233,.75); background: linear-gradient(90deg, rgba(0,219,233,.07), transparent); transform: translateY(-50%); }
+.mock-growth > small { display: block; margin-bottom: 8px; color: #718c80; font-size: 5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.mock-growth div { display: grid; grid-template-columns: 16px 1fr 30px; align-items: center; min-height: 23px; border-bottom: 1px solid rgba(255,255,255,.055); }
+.mock-growth div:last-child { border: 0; }
+.mock-growth div::after { content: ""; width: 100%; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--mint), rgba(0,219,233,.1)); }
+.mock-growth b { color: var(--mint); font-family: var(--font-manrope); font-size: 11px; line-height: 1; }
+.mock-growth div span { color: #c0cfca; font-size: 7px; font-weight: 650; }
 .mock-stats { min-height: 0; display: grid; grid-template-columns: repeat(4, 1fr); padding: 9px 15px; gap: 7px; background: rgba(255,255,255,.015); }
 .mock-stats span { display: grid; grid-template-columns: 16px 1fr; grid-template-rows: auto auto; align-content: center; column-gap: 6px; padding-right: 6px; color: #829092; font-size: 5px; border-right: 1px solid #363d3f; }
 .mock-stats span:last-child { border: 0; }
@@ -320,6 +326,8 @@ button { font: inherit; }
   .hero { min-height: auto; padding: 120px 0 80px; }
   .hero__copy h1 { font-size: clamp(43px, 13vw, 60px); }
   .hero__copy > p:not(.hero__note) { font-size: 16px; }
+  .hero__payment-note { align-items: flex-start; max-width: 335px; margin: -5px auto 18px; padding-inline: 6px; font-size: 12px; text-align: center; }
+  .hero__payment-note svg { margin-top: 1px; }
   .hero__actions { display: flex; flex-wrap: nowrap; width: min(100%, 370px); margin-inline: auto; gap: 8px; }
   .hero__actions .button { width: auto; min-width: 0; min-height: 46px; padding-inline: 12px; font-size: 12px; white-space: nowrap; }
   .hero__actions .button:first-child { flex: 1.35; }
@@ -438,9 +446,11 @@ button { font: inherit; }
   .mock-nav { height: 36px; padding-inline: 15px; }
   .mock-hero { padding: 19px 17px; }
   .mock-hero strong { font-size: 20px; }
-  .mock-assurance { left: 54%; width: 32%; padding: 10px 12px; }
-  .mock-assurance span { margin-bottom: 6px; font-size: 4px; }
-  .mock-assurance b { font-size: 9px; }
+  .mock-growth { left: 54%; width: 33%; padding: 9px 11px; }
+  .mock-growth > small { margin-bottom: 5px; font-size: 4px; }
+  .mock-growth div { grid-template-columns: 13px 1fr 22px; min-height: 18px; }
+  .mock-growth b { font-size: 9px; }
+  .mock-growth div span { font-size: 5.5px; }
   .mock-stats { gap: 4px; padding: 7px 10px; }
   .mock-stats span { grid-template-columns: 12px 1fr; column-gap: 4px; padding-right: 4px; }
   .mock-stats img { width: 11px; height: 11px; }
@@ -460,9 +470,11 @@ button { font: inherit; }
   .mock-hero small { font-size: 4px; }
   .mock-hero strong { margin: 6px 0; font-size: 14px; }
   .mock-hero p { max-width: 140px; margin-bottom: 7px; font-size: 5px; line-height: 1.35; }
-  .mock-assurance { left: 55%; width: 36%; padding: 7px 8px; }
-  .mock-assurance span { margin-bottom: 4px; font-size: 3px; letter-spacing: .09em; }
-  .mock-assurance b { font-size: 6.5px; line-height: 1.15; }
+  .mock-growth { left: 55%; width: 37%; padding: 6px 7px; }
+  .mock-growth > small { margin-bottom: 3px; font-size: 2.8px; letter-spacing: .08em; }
+  .mock-growth div { grid-template-columns: 9px 1fr 14px; min-height: 13px; }
+  .mock-growth b { font-size: 6.5px; }
+  .mock-growth div span { font-size: 4px; }
   .mock-stats { gap: 2px; padding: 5px 6px; }
   .mock-stats span { grid-template-columns: 9px 1fr; column-gap: 2px; padding-right: 2px; }
   .mock-stats img { width: 8px; height: 8px; }
