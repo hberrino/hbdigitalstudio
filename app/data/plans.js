@@ -24,7 +24,7 @@ export const plans = [
     name: "Plan System",
     eyebrow: "Un sistema completo desarrollado a medida",
     description: "Una solución integral para digitalizar procesos, administrar operaciones o centralizar información en una plataforma propia.",
-    timeline: "Tiempo estimado: a definir según la complejidad",
+    timeline: "Tiempo estimado: según complejidad",
     features: ["Diseño y desarrollo a medida", "Página institucional o comercial incluida", "Sistema de gestión y panel avanzado", "Usuarios, roles y permisos", "Automatizaciones, informes e integraciones", "Arquitectura preparada para crecer", "Seguimiento técnico", "Soporte especializado"],
     message: "Hola, quiero consultar sobre el Plan System.",
   },
