@@ -14,6 +14,7 @@ test("genera una landing estática completa para Nginx", async () => {
   assert.match(html, /Diseñamos y desarrollamos páginas web/);
   assert.match(html, /terminás de abonar cuando el resultado cumple/);
   assert.match(html, /Web completa para tu negocio/);
+  assert.match(html, /<link rel="canonical" href="https:\/\/hbdigitalstudio\.com\/"/);
   assert.match(html, /https:\/\/hbdigitalstudio\.com\/og-hb-digital-studio\.png/);
   assert.ok(assets.some((file) => file.endsWith(".js")));
   assert.ok(assets.some((file) => file.endsWith(".css")));
