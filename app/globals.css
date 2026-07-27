@@ -204,6 +204,7 @@ button { font: inherit; }
 .plans__compare { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 38px; text-align: center; }
 .plans__compare p { margin: 0; color: var(--muted); font-size: 13px; }
 .plans__compare button { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 17px; border: 1px solid rgba(0,219,233,.3); border-radius: 9px; background: rgba(0,219,233,.06); color: var(--mint); font-weight: 720; cursor: pointer; transition: background .2s ease, border-color .2s ease, transform .2s ease; }
+.plans__compare-icon { width: 18px; height: 18px; object-fit: contain; filter: invert(80%) sepia(63%) saturate(3070%) hue-rotate(133deg) brightness(100%) contrast(102%); }
 .plans__compare button:hover { transform: translateY(-2px); border-color: var(--mint); background: rgba(0,219,233,.11); }
 .comparison-modal { width: min(1040px, 100%); }
 .comparison-modal > p { max-width: 680px; }
