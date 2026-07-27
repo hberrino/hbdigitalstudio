@@ -21,7 +21,7 @@ export default function Navbar() {
         </a>
         <nav id="mobile-navigation" className={`navbar__nav ${open ? "is-open" : ""}`} aria-label="Navegación principal">
           {links.map(([label, href]) => <a href={href} key={href} onClick={() => setOpen(false)}>{label}</a>)}
-          <Button href="#contacto" className="navbar__cta" iconSrc="/icons8-natural-user-interface-2-50.png">Solicitar presupuesto</Button>
+          <Button href="#contacto" className="navbar__cta" iconSrc="/icons8-cursor-64.png">Solicitar presupuesto</Button>
         </nav>
         <button className="navbar__toggle" type="button" aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Cerrar menú" : "Abrir menú"} onClick={() => setOpen((value) => !value)}>
           {open ? <X /> : <Menu />}

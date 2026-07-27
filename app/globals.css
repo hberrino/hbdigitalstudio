@@ -59,6 +59,7 @@ button { font: inherit; }
 .navbar__nav > a:not(.button):hover { color: #efffff; }
 .navbar__nav > a:not(.button):hover::after { right: 0; }
 .navbar__cta { min-height: 42px; padding-inline: 17px; color: #00363a !important; font-size: 13px; letter-spacing: -.01em; }
+.navbar__cta .button__image-icon { width: 21px; height: 21px; }
 .navbar__toggle { display: none; border: 0; background: transparent; color: var(--ink); padding: 6px; }
 
 /* Hero */
