@@ -7,7 +7,7 @@ import CopyEmailButton from "./CopyEmailButton";
 import { SectionHeading } from "./ui";
 
 export default function FaqSection() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(-1);
   return (
     <section className="faq section" id="preguntas"><div className="container faq__grid">
       <div className="faq__intro"><SectionHeading eyebrow="Preguntas frecuentes" title="Lo que necesitás saber antes de empezar" text="Si tu duda no está acá, copiá nuestro correo y escribinos. Te respondemos de forma clara y sin compromiso." /><CopyEmailButton /></div>

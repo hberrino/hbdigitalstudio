@@ -13,18 +13,40 @@ export default function Hero() {
           <div className="hero__actions"><Button href="#contacto">Quiero mi página web</Button><Button href="#planes" variant="secondary">Ver planes</Button></div>
           <p className="hero__note"><span /> Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</p>
         </div>
+
         <div className="showcase" aria-label="Representación de una página web adaptable a notebook y celular">
           <div className="showcase__glow" />
           <div className="laptop">
             <div className="laptop__top">
               <div className="browser-bar"><i /><i /><i /><span>tumarca.com</span></div>
               <div className="mock-nav"><b>marca.</b><span /><span /><button>Contactar</button></div>
-              <div className="mock-hero"><small>Una idea que crece</small><strong>Tu negocio,<br /><em>mejor presentado.</em></strong><p>Una experiencia clara que transforma visitas en oportunidades.</p><button>Conocer más <MousePointerClick size={12} /></button></div>
-              <div className="mock-stats"><span><b>+24h</b> presencia online</span><span><b>100%</b> responsive</span><span><b>01</b> objetivo claro</span></div>
-            </div><div className="laptop__base" />
+              <div className="mock-hero">
+                <small>Presencia digital que genera oportunidades</small>
+                <strong>Tu negocio abierto<br /><em>las 24 horas.</em></strong>
+                <p>Mostrá el valor de tu marca y convertí cada visita en una nueva consulta.</p>
+                <button>Quiero más consultas <MousePointerClick size={12} /></button>
+              </div>
+              <div className="mock-stats">
+                <span><img src="/icons8-amazon-web-services-48.png" alt="" /><b>AWS</b><small>Cloud</small></span>
+                <span><img src="/icons8-cloudflare-48.png" alt="" /><b>Cloudflare</b><small>Protección</small></span>
+                <span><img src="/icons8-candado-50.png" alt="" /><b>SSL/TLS</b><small>Seguridad</small></span>
+                <span><img src="/icons8-búsqueda-50.png" alt="" /><b>SEO</b><small>Visibilidad</small></span>
+              </div>
+            </div>
           </div>
-          <div className="phone"><div className="phone__speaker" /><div className="phone__content"><div className="phone__brand">marca.</div><span>Soluciones simples</span><strong>Todo empieza<br />con una <em>buena web.</em></strong><button>Hablemos</button><div className="phone__card"><CheckCircle2 size={14} /> Disponible 24/7</div></div></div>
-          <div className="floating-card"><CheckCircle2 size={18} /><span><small>Estado</small>Listo para crecer</span></div>
+
+          <div className="phone">
+            <div className="phone__speaker" />
+            <div className="phone__content">
+              <div className="phone__brand">marca.</div>
+              <span>Disponible desde cualquier lugar</span>
+              <strong>Tu negocio,<br />en la mano de <em>tus clientes.</em></strong>
+              <button>Consultar ahora</button>
+              <div className="phone__card"><CheckCircle2 size={14} /> Seguro y responsive</div>
+            </div>
+          </div>
+
+          <div className="floating-card"><CheckCircle2 size={18} /><span><small>Infraestructura</small>Protegida y online</span></div>
         </div>
       </div>
       <a href="#problema" className="scroll-hint" aria-label="Ir a la siguiente sección"><ArrowDown size={18} /></a>

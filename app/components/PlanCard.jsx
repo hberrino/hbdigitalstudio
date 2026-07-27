@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = "542494373738";
 export default function PlanCard({ plan, onInfo }) {
   const whatsapp = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(plan.message)}`;
   return (
-    <article className={`plan-card ${plan.badge ? "plan-card--featured" : ""}`}>
+    <article className={`plan-card ${plan.badge ? "plan-card--featured" : ""}`} data-plan-id={plan.id}>
       {plan.badge && <span className="plan-card__badge">{plan.badge}</span>}
       <div className="plan-card__head">
         <span className="plan-card__label">Plan</span>
