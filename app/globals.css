@@ -402,12 +402,12 @@ button { font: inherit; }
   .navbar__nav > a:not(.button):hover { color: var(--mint); background: rgba(0,219,233,.045); }
   .brand__logo-viewport { width: 48px; height: 50px; }
   .brand__logo-viewport img { width: 55px; }
-  .hero { min-height: auto; padding: 96px 0 74px; }
+  .hero { min-height: auto; padding: 100px 0 74px; }
   .hero__copy { display: grid; grid-template-rows: auto auto; align-content: space-between; min-height: clamp(590px, calc(100svh - 210px), 650px); padding-top: 0; }
-  .hero__intro > .eyebrow { max-width: 330px; margin-bottom: 22px; line-height: 1.35; }
+  .hero__intro > .eyebrow { max-width: 330px; margin-bottom: 28px; line-height: 1.35; }
   .hero__copy h1 { font-size: clamp(36px, 10.8vw, 46px); }
   .hero__intro > p { max-width: 330px; margin: 17px auto 20px; color: #91a2a4; font-size: 13px; line-height: 1.55; }
-  .hero__conversion { gap: 18px; }
+  .hero__conversion { gap: 30px; }
   .hero__commercial-promises { max-width: 350px; margin: 0 auto; }
   .hero__promise { grid-template-columns: 31px 1fr; gap: 10px; min-height: 54px; padding: 10px 8px; }
   .hero__promise > span { width: 30px; height: 30px; }
@@ -420,7 +420,7 @@ button { font: inherit; }
   .hero__price-button { width: 132px; min-height: 58px; padding-inline: 13px; }
   .hero__price-button strong { font-size: 12px; }
   .hero__price-button span { margin-top: 6px; font-size: 6.6px; }
-  .hero__note { justify-content: center; align-items: center; max-width: 320px; margin: 25px auto 0; padding-inline: 8px; text-align: center; font-size: 12.5px; line-height: 1.55; }
+  .hero__note { justify-content: center; align-items: center; max-width: 320px; margin: 32px auto 0; padding-inline: 8px; text-align: center; font-size: 12.5px; line-height: 1.55; }
   .hero__note i { width: 7px; height: 7px; }
   .hero__note span { max-width: 270px; }
   .showcase { grid-template-columns: 1fr; gap: 32px; width: min(100%, 420px); min-height: 0; margin-top: 95px; padding-top: 44px; }
