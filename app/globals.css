@@ -423,7 +423,7 @@ button { font: inherit; }
   .hero__note { justify-content: center; align-items: center; max-width: 320px; margin: 25px auto 0; padding-inline: 8px; text-align: center; font-size: 12.5px; line-height: 1.55; }
   .hero__note i { width: 7px; height: 7px; }
   .hero__note span { max-width: 270px; }
-  .showcase { grid-template-columns: 1fr; gap: 32px; width: min(100%, 420px); min-height: 0; margin-top: 145px; padding-top: 44px; }
+  .showcase { grid-template-columns: 1fr; gap: 32px; width: min(100%, 420px); min-height: 0; margin-top: 95px; padding-top: 44px; }
   .showcase::before { content: ""; position: absolute; top: 0; left: 50%; width: min(280px, 78%); height: 1px; background: linear-gradient(90deg, transparent, rgba(0,219,233,.28), rgba(209,188,255,.18), transparent); transform: translateX(-50%); }
   .social-showcase { display: flex; flex-direction: column; align-items: center; text-align: center; }
   .social-showcase h2 { order: 1; }
