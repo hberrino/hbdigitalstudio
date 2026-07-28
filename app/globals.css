@@ -420,7 +420,7 @@ button { font: inherit; }
   .hero__price-button { width: 132px; min-height: 58px; padding-inline: 13px; }
   .hero__price-button strong { font-size: 12px; }
   .hero__price-button span { margin-top: 6px; font-size: 6.6px; }
-  .hero__note { justify-content: center; align-items: center; max-width: 320px; margin: 32px auto 0; padding-inline: 8px; text-align: center; font-size: 12.5px; line-height: 1.55; }
+  .hero__note { justify-content: center; align-items: center; max-width: 320px; margin: 40px auto 0; padding-inline: 8px; text-align: center; font-size: 12.5px; line-height: 1.55; }
   .hero__note i { width: 7px; height: 7px; }
   .hero__note span { max-width: 270px; }
   .showcase { grid-template-columns: 1fr; gap: 32px; width: min(100%, 420px); min-height: 0; margin-top: 95px; padding-top: 44px; }
