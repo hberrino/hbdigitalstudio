@@ -20,11 +20,11 @@ export default function Hero() {
               <div className="hero__actions">
                 <div className="hero__price-copy">
                   <span>¿No nos creés?</span>
-                  <strong>Comprobalo: mirá nuestros planes y precios</strong>
+                  <strong>Comprobalo en nuestros planes</strong>
                 </div>
                 <a className="hero__price-button" href="#planes">
-                  <strong>Ver planes</strong>
-                  <span>Precios y detalles</span>
+                  <strong>Ver precios</strong>
+                  <span>50% OFF limitado</span>
                 </a>
               </div>
               <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
