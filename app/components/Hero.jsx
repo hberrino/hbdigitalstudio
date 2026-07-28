@@ -1,5 +1,4 @@
 import { ArrowDown, ArrowUpRight, BadgeDollarSign, CheckCircle2 } from "lucide-react";
-import { Button } from "./ui";
 
 export default function Hero() {
   return (
@@ -7,18 +6,28 @@ export default function Hero() {
       <div className="hero__orb hero__orb--one" /><div className="hero__orb hero__orb--two" />
       <div className="container hero__grid">
         <div className="hero__copy">
-          <span className="eyebrow">Desarrollo web para negocios que quieren crecer</span>
-          <h1>Transformamos tu negocio en una experiencia digital <em>profesional.</em></h1>
-          <p>Diseñamos y desarrollamos páginas web pensadas para atraer clientes, fortalecer tu marca y acompañar el crecimiento de tu negocio.</p>
+          <div className="hero__intro">
+            <span className="eyebrow">Desarrollo web para negocios que quieren crecer</span>
+            <h1>Transformamos tu negocio en una experiencia digital <em>profesional.</em></h1>
+            <p>Diseñamos y desarrollamos páginas web pensadas para atraer clientes, fortalecer tu marca y acompañar el crecimiento de tu negocio.</p>
+          </div>
           <div className="hero__commercial-promises">
-            <div className="hero__promise"><span><BadgeDollarSign size={19} /></span><p>Planes accesibles para llevar tu negocio a la web <strong>sin resignar seguridad, calidad ni rendimiento.</strong></p></div>
+            <div className="hero__promise"><span><BadgeDollarSign size={19} /></span><p>El <strong>precio más económico</strong> en desarrollo web, con el mejor nivel de seguridad, calidad y rendimiento.</p></div>
             <div className="hero__promise"><span><CheckCircle2 size={19} /></span><p>Tu tranquilidad forma parte del proyecto: <strong>terminás de abonar cuando el resultado cumple.</strong></p></div>
           </div>
-          <div className="hero__actions">
-            <Button href="#contacto" className="hero__cta hero__cta--primary" showArrow={false}>Quiero mi página web</Button>
-            <Button href="#planes" variant="secondary" className="hero__cta hero__cta--plans" showArrow={false}>Ver planes</Button>
+          <div className="hero__closing">
+            <div className="hero__actions">
+              <div className="hero__price-copy">
+                <span>¿No nos creés?</span>
+                <strong>Comprobalo: mirá nuestros planes y precios</strong>
+              </div>
+              <a className="hero__price-button" href="#planes">
+                <strong>Ver planes</strong>
+                <span>Precios y detalles</span>
+              </a>
+            </div>
+            <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
           </div>
-          <p className="hero__note"><i aria-hidden="true" /><span>Tu negocio trabaja todos los días. Tu página web también debería hacerlo.</span></p>
         </div>
 
         <div className="showcase" aria-label="Invitación a conocer HB Digital Studio en Instagram junto a una representación mobile">

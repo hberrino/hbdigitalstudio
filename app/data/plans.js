@@ -6,7 +6,13 @@ export const plans = [
     description: "Además de presentar tu marca, incorporamos funcionalidades para automatizar tareas, administrar información y mejorar tus procesos.",
     timeline: "Tiempo estimado: 1 mes",
     features: ["Todo lo incluido en el Plan Impacto", "Funcionalidades personalizadas", "Panel de administración y usuarios", "Formularios avanzados y correos automáticos", "Turnos, reservas o solicitudes", "Informes, estadísticas e integraciones", "Mejoras evolutivas", "Soporte prioritario"],
-    message: "Hola, quiero consultar sobre el Plan Function.",
+    price: {
+      originalAmount: "Desde $300.000",
+      amount: "Desde $150.000",
+      caption: "pesos argentinos",
+      promo: "50% OFF aplicado",
+    },
+    message: "Hola, quiero el Plan Function aplicando el 50% OFF por tiempo limitado.",
     hasModal: true,
   },
   {
@@ -17,7 +23,13 @@ export const plans = [
     description: "Una página profesional para presentar tu negocio, tus servicios y facilitar el contacto con potenciales clientes.",
     timeline: "Tiempo estimado: 1 semana",
     features: ["Web completa para tu negocio", "Diseño personalizado y responsive", "WhatsApp, redes y formulario de contacto", "SEO técnico y velocidad optimizada", "Dominio personalizado y SSL/TLS", "Alojamiento AWS y protección Cloudflare", "Soporte posterior a la publicación", "Actualizaciones y mejoras requeridas"],
-    message: "Hola, quiero consultar sobre el Plan Impacto.",
+    price: {
+      originalAmount: "$260.000",
+      amount: "$130.000",
+      caption: "pesos argentinos",
+      promo: "50% OFF aplicado",
+    },
+    message: "Hola, quiero el Plan Impacto aplicando el 50% OFF por tiempo limitado.",
   },
   {
     id: "system",
@@ -26,6 +38,13 @@ export const plans = [
     description: "Una solución integral para digitalizar procesos, administrar operaciones o centralizar información en una plataforma propia.",
     timeline: "Tiempo estimado: según complejidad",
     features: ["Todo lo incluido en el Plan Function", "Diseño y desarrollo a medida", "Página institucional o comercial incluida", "Sistema de gestión y panel avanzado", "Usuarios, roles y permisos", "Automatizaciones, informes e integraciones", "Arquitectura preparada para crecer", "Soporte y mantenimiento diario"],
-    message: "Hola, quiero consultar sobre el Plan System.",
+    price: {
+      originalAmount: "$XXX.XXX",
+      amount: "Precio a definir",
+      caption: "Debe analizarse la complejidad",
+      promo: "Consultalo sin compromiso",
+      custom: true,
+    },
+    message: "Hola, quiero el Plan System aplicando el 50% OFF por tiempo limitado.",
   },
 ];
