@@ -4,7 +4,7 @@ import { SectionHeading } from "./ui";
 import FeaturesModal from "./FeaturesModal";
 import PlanCard from "./PlanCard";
 
-const OFFER_END = new Date("2027-03-27T23:59:59-03:00").getTime();
+const OFFER_END = new Date("2026-12-31T23:59:59-03:00").getTime();
 
 function getOfferTimeLeft() {
   const total = Math.max(0, OFFER_END - Date.now());
@@ -45,7 +45,7 @@ function OfferCountdown() {
           </span>
         ))}
       </div>
-      <small className="plans__countdown-date">Promoción válida hasta el 27 de marzo de 2027.</small>
+      <small className="plans__countdown-date">Promoción válida hasta el 31 de diciembre de 2026.</small>
     </div>
   );
 }
